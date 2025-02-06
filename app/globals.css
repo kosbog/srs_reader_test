@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-hover-bg {
+    @apply dark:enabled:hover:bg-transparent enabled:hover:bg-transparent !important;
+  }
+  .no-ring {
+    @apply focus:ring-0 !important;
+  }
+  .settings-button {
+    @apply px-4 py-2 border-none focus:ring-0 dark:text-light-icon text-button-text !important;
+  }
+  .light-active-button {
+    @apply bg-[#83325a] text-white !important;
+  }
+  .light-regular-button {
+    @apply bg-light-button text-button-text enabled:hover:bg-[rgba(131,50,91,0.5)] hover:text-white active:light-active-button !important;
+  }
+  .dark-active-button {
+    @apply dark:bg-dark-button-1 dark:text-light-helper !important;
+  }
+  .dark-regular-button {
+    @apply dark:bg-dark-button dark:enabled:hover:bg-[rgba(142,63,103,0.5)] dark:text-light-helper !important;
+  }
+  .action-button {
+    @apply border-none bg-transparent dark:bg-transparent dark:text-light-icon text-dark-icon [&>span]:px-2 transition-none;
+  }
+}
